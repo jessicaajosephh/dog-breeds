@@ -26,6 +26,10 @@ class CLI
         puts "Goodbye! Thanks for stopping in!"
     end
 
+    def invalid_entry
+        puts "Hmmmmmm, I'm not understanding, please try again."
+    end
+
 
     
 
