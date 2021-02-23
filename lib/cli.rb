@@ -31,10 +31,7 @@ class CLI
         puts "Goodbye! Thanks for stopping in!"
     end
 
-    def invalid_entry
-        puts "Hmmmmmm, I'm not understanding, please try again."
-    end
-
+   
     def list_of_breeds
         puts "Select which breed you would like information on"
         DogBreeds.all.each_with_index do |breed, index|
@@ -47,17 +44,24 @@ class CLI
     def breed_selection(breed)
         breed = DogBreeds.find_by_name(breed)
         breed.each do |breed_info|
-            puts "#{breed.name}"
+            puts "Name of Breed: #{breed_info.name}"
+            puts "Weight: #{breed_info.weight}"
+            puts "Height: #{breed_info.height}"
+            puts "Bred For: #{breed_info.bred_for}"
+            puts "Breed Group: #{breed_info.breed_group}"
+            puts "Life Span: #{breed_info.life_span}"
+            puts "Temperament: #{breed_info.temperament}"
+            menu
         end
-
-
 
     end
 
+    def invalid_entry
+        puts "Hmmmmmm, I'm not understanding, please try again."
+        menu
+    end
 
-    
-
-
+    #binding.pry
 
 
 end
