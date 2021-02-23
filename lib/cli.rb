@@ -30,6 +30,10 @@ class CLI
         puts "Hmmmmmm, I'm not understanding, please try again."
     end
 
+    def list_of_breeds
+
+    end
+
 
     
 
