@@ -10,6 +10,10 @@ class API
         self.create_breed_objects
     end
 
+    def create_breed_objects(breed_array)
+
+    end
+
 
 
 end
