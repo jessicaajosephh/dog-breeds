@@ -22,6 +22,10 @@ class CLI
         end
     end
 
+    def goodbye
+        puts "Goodbye! Thanks for stopping in!"
+    end
+
 
     
 
