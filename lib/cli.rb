@@ -1,5 +1,9 @@
 class CLI
 
+    def initialize
+        API.new.get_breed_data
+    end
+
     def call
         greeting
     end
