@@ -56,7 +56,7 @@ class CLI
     def breed_selection(breed)
         breed = DogBreeds.find_by_name(breed)
         breed.each do |breed_info|
-            puts "--------------------------------------------------------------------"
+            puts "-------------------------------------------------------------------------------------------------"
             puts "Name of Breed: #{breed_info.name}"
             puts "Weight: #{breed_info.weight}"
             puts "Height: #{breed_info.height}"
@@ -64,7 +64,7 @@ class CLI
             puts "Breed Group: #{breed_info.breed_group}"
             puts "Life Span: #{breed_info.life_span}"
             puts "Temperament: #{breed_info.temperament}"
-            puts "--------------------------------------------------------------------"
+            puts "-------------------------------------------------------------------------------------------------"
             puts ""
             puts "To continue searching for breeds, enter 'breeds'."
             puts "If there is nothing else you would like to do, enter 'exit'."
