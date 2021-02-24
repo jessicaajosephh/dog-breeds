@@ -46,7 +46,7 @@ class CLI
         puts ""
         puts "Select which breed you would like information on"
         puts ""
-        DogBreeds.all.each_with_index do |breed, index|
+        DogBreed.all.each_with_index do |breed, index|
             puts "#{index + 1}. #{breed.name}"
         end
         input = gets.strip.downcase
@@ -54,7 +54,7 @@ class CLI
     end
 
     def breed_selection(breed)
-        breed = DogBreeds.find_by_name(breed)
+        breed = DogBreed.find_by_name(breed)
         breed.each do |breed_info|
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             puts "Name of Breed: #{breed_info.name}"

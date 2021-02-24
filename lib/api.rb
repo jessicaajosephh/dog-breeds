@@ -12,7 +12,7 @@ class API
 
     def create_breed_objects(breed_array)
         breed_array.each do |breed_hash|
-            DogBreeds.new(breed_hash)
+            DogBreed.new(breed_hash)
         end
     end
 

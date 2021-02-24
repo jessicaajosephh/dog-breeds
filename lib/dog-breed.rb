@@ -1,4 +1,4 @@
-class DogBreeds
+class DogBreed
 
     @@all = []
 
