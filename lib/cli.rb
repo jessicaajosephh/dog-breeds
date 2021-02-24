@@ -38,11 +38,12 @@ class CLI
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
         puts "Goodbye! Thanks for stopping in!"
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts ""
     end
 
    
     def list_of_breeds
-        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts ""
         puts "Select which breed you would like information on:"
         puts ""
@@ -54,7 +55,7 @@ class CLI
     end
 
     def breed_selection(breed)
-        breed = DogBreed.find_by_name(breed)
+        breed = DogBreed.find_by_name(breed) 
         breed.each do |breed_info|
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             puts "Name of Breed: #{breed_info.name}"
@@ -68,13 +69,16 @@ class CLI
             puts ""
             puts "To continue searching for breeds, enter 'breeds'."
             puts "If there is nothing else you would like to do, enter 'exit'."
+            puts ""
+            puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             menu
-        end 
-
+        end
     end
 
     def invalid_entry
+        puts ""
         puts "Hmmmmmm, I'm not understanding, please try again."
+        puts ""
         menu
     end
 
