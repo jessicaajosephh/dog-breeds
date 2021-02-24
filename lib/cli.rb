@@ -58,7 +58,7 @@ class CLI
         breed.each do |breed_info|
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             puts "Name of Breed: #{breed_info.name}"
-            puts "Approximate Weight: #{breed_info.weight}"
+            puts "Approximate Weight: #{breed_info.get_metric_weight}"
             puts "Approximate Height: #{breed_info.height}"
             puts "Bred For: #{breed_info.bred_for}"
             puts "Breed Group: #{breed_info.breed_group}"

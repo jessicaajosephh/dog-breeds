@@ -20,6 +20,10 @@ class DogBreed
         end
     end
 
+    def get_metric_weight
+        self.weight["metric"] + " lbs"
+    end
+
 
 
 end
