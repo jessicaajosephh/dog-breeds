@@ -44,7 +44,7 @@ class CLI
     def list_of_breeds
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts ""
-        puts "Select which breed you would like information on"
+        puts "Select which breed you would like information on:"
         puts ""
         DogBreed.all.each_with_index do |breed, index|
             puts "#{index + 1}. #{breed.name}"
@@ -68,7 +68,6 @@ class CLI
             puts ""
             puts "To continue searching for breeds, enter 'breeds'."
             puts "If there is nothing else you would like to do, enter 'exit'."
-            
             menu
         end 
 
