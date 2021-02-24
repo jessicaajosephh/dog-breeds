@@ -3,6 +3,6 @@ require 'httparty'
 
 require_relative '../lib/api.rb'
 require_relative '../lib/cli.rb'
-require_relative '../lib/dog-breeds.rb'
+require_relative '../lib/dog-breed.rb'
 
 
