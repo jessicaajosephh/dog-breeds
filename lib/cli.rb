@@ -59,7 +59,7 @@ class CLI
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             puts "Name of Breed: #{breed_info.name}"
             puts "Approximate Weight: #{breed_info.get_metric_weight}"
-            puts "Approximate Height: #{breed_info.height}"
+            puts "Approximate Height: #{breed_info.get_metric_height}"
             puts "Bred For: #{breed_info.bred_for}"
             puts "Breed Group: #{breed_info.breed_group}"
             puts "Average Life Span: #{breed_info.life_span}"

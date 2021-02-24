@@ -24,6 +24,10 @@ class DogBreed
         self.weight["metric"] + " lbs"
     end
 
+    def get_metric_height
+        self.height["metric"] + " cm"
+    end
+
 
 
 end
