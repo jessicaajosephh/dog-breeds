@@ -10,7 +10,7 @@ class CLI
     end
 
     def greeting
-        puts "----------------------------------------------------------------------------"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts ""
         puts "Welcome! Start searching for dog breeds now!"
         puts ""
@@ -18,7 +18,7 @@ class CLI
         puts ""
         puts "--If there is nothing you would like to do at the moment, enter 'exit'"
         puts ""
-        puts "----------------------------------------------------------------------------"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     end   
 
     def menu
@@ -35,14 +35,14 @@ class CLI
 
     def goodbye
         puts ""
-        puts "---------------------------------------" 
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
         puts "Goodbye! Thanks for stopping in!"
-        puts "---------------------------------------"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     end
 
    
     def list_of_breeds
-        puts "----------------------------------------------------------"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts ""
         puts "Select which breed you would like information on"
         puts ""
@@ -56,7 +56,7 @@ class CLI
     def breed_selection(breed)
         breed = DogBreeds.find_by_name(breed)
         breed.each do |breed_info|
-            puts "-------------------------------------------------------------------------------------------------"
+            puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             puts "Name of Breed: #{breed_info.name}"
             puts "Weight: #{breed_info.weight}"
             puts "Height: #{breed_info.height}"
@@ -64,12 +64,12 @@ class CLI
             puts "Breed Group: #{breed_info.breed_group}"
             puts "Life Span: #{breed_info.life_span}"
             puts "Temperament: #{breed_info.temperament}"
-            puts "-------------------------------------------------------------------------------------------------"
+            puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             puts ""
             puts "To continue searching for breeds, enter 'breeds'."
             puts "If there is nothing else you would like to do, enter 'exit'."
             menu
-        end
+        end 
 
     end
 
