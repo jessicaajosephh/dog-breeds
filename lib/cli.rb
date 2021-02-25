@@ -43,7 +43,7 @@ class CLI
 
    
     def list_of_breeds
-        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts ""
         puts "Select which breed you would like information on:"
         puts ""
@@ -56,22 +56,24 @@ class CLI
 
     def breed_selection(breed)
         breed = DogBreed.find_by_name(breed) 
-        breed.each do |breed_info|
+        if breed 
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-            puts "Name of Breed: #{breed_info.name}"
-            puts "Approximate Weight: #{breed_info.get_metric_weight}"
-            puts "Approximate Height: #{breed_info.get_metric_height}"
-            puts "Bred For: #{breed_info.bred_for}"
-            puts "Breed Group: #{breed_info.breed_group}"
-            puts "Average Life Span: #{breed_info.life_span}"
-            puts "Temperament: #{breed_info.temperament}"
+            puts "Name of Breed: #{breed.name}"
+            puts "Approximate Weight: #{breed.get_metric_weight}"
+            puts "Approximate Height: #{breed.get_metric_height}"
+            puts "Bred For: #{breed.bred_for}"
+            puts "Breed Group: #{breed.breed_group}"
+            puts "Average Life Span: #{breed.life_span}"
+            puts "Temperament: #{breed.temperament}"
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             puts ""
             puts "To continue searching for breeds, enter 'breeds'."
             puts "If there is nothing else you would like to do, enter 'exit'."
             puts ""
-            puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             menu
+        else
+            invalid_entry
         end
     end
 

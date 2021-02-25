@@ -15,7 +15,7 @@ class DogBreed
     end
 
     def self.find_by_name(name)
-        self.all.select do |breed|
+        self.all.find do |breed|
             breed.name.downcase == name
         end
     end
