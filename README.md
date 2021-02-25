@@ -6,12 +6,15 @@ Using this [repo](https://github.com/jessicaajosephh/dog-breeds) you want to for
 1. Go to GitHub, make sure you are signed into your account.
 2. Select the green "code" dropdown on the top right of the screen
 3. Make sure "SSH" is highlighted.
-4. Copy the SSH link and fork into your own GitHub account.
+4. Copy the SSH link
+5. Open you terminal and locate where in your computer you would like to store the repo
+6. Enter "git clone" and then follow with the SSH link that you copied.
+7. Once you hit enter the repo should now be stored into your own GitHub account.
 
 
 
 ## Usage
-Type the input below into the terminal and follow on the on screen prompts.
+Type the input below into the terminal and follow the on screen prompts.
 ``` 
 bin/run
 ```
