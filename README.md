@@ -20,7 +20,7 @@ bin/run
 ```
 
 ## Contributing
-Pull requests are welcome.
+Pull requests are welcome. If there are major changes that are wanting to be made, please raise an issue beforehand.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
