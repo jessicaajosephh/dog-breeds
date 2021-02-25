@@ -23,7 +23,7 @@ class CLI
 
     def menu
         input = gets.strip.downcase
-
+        #until input == "exit"
         if input == "breeds"
             list_of_breeds
         elsif input == "exit"
@@ -55,6 +55,7 @@ class CLI
     end
 
     def breed_selection(breed)
+        #input = gets.strip.downcase
         breed = DogBreed.find_by_name(breed) 
         if breed 
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -73,8 +74,14 @@ class CLI
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             menu
         else
-            invalid_entry
+            incorrect_breed_name
         end
+    end
+
+    def incorrect_breed_name
+        puts "The breed name that you entered may have been spelled incorrectly."
+        puts "Please enter 'breeds' to pull up the list and try again."
+        menu
     end
 
     def invalid_entry
