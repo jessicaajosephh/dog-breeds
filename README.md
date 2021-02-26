@@ -10,6 +10,10 @@ Using this [repo](https://github.com/jessicaajosephh/dog-breeds) you want to for
 5. Open you terminal and locate where in your computer you would like to store the repo
 6. Enter "git clone" and then follow with the SSH link that you copied.
 7. Once you hit enter the repo should now be stored into your own GitHub account.
+8. To install the gems that are required for this project run:
+```
+bundle install
+```
 
 
 
