@@ -14,11 +14,7 @@ class DogBreed
         @@all
     end
 
-    #def self.unique_origin(origin)
-     #   self.all.find do |breed|
-      #      breed.origin.downcase == origin
-       # end
-    #end
+   
     #binding.pry
 
     def self.find_by_name(name)
